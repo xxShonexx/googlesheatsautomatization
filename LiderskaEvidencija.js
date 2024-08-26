@@ -47,13 +47,13 @@ function MesecnaPostignuca() {
     });
   
     const data = sheet.getDataRange().getValues();
-    const backgrounds = sheet.getDataRange().getBackgrounds(); // Додајемо позадине
+    const backgrounds = sheet.getDataRange().getBackgrounds();
   
     data.forEach((row, rowIndex) => {
       const user = users.find(user => row.includes(user));
       if (user) {
         row.forEach((cell, colIndex) => {
-          const bgColor = backgrounds[rowIndex][colIndex]; // Узимамо боју позадине
+          const bgColor = backgrounds[rowIndex][colIndex]
           const counts = resultsMap.get(user);
   
           // Проверите активности
